@@ -1,0 +1,27 @@
+{
+  "source": "./src",
+  "destination": "./doc/esdoc",
+  "plugins": [
+    {"name": "esdoc-flow-plugin"},
+    {"name": "esdoc-coverage-plugin", "option": {"enable": true}},
+    {"name": "esdoc-lint-plugin", "option": {"enable": true}},
+    {"name": "esdoc-babel-plugin",
+      "option": {
+        "plugins": [
+          "transform-decorators-legacy",
+          "transform-flow-strip-types"
+        ]
+      }
+    }
+  ],
+  "experimentalProposal": {
+    "classProperties": true,
+    "objectRestSpread": true,
+    "decorators": true,
+    "doExpressions": true,
+    "functionBind": true,
+    "asyncGenerators": true,
+    "exportExtensions": true,
+    "dynamicImport": true
+  }
+}

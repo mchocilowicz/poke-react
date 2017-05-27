@@ -1,0 +1,35 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "plugin:jest/recommended",
+    "standard",
+    "standard-react",
+    "standard-flow",
+    "plugin:react/all"
+  ],
+  "plugins": [
+    "react",
+    "flowtype",
+    "jest"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "linebreak-style": "off",
+    "react/require-default-props": "off",
+    "react/display-name": "off"
+  },
+  "env": {
+    "jest": true
+  }
+}
