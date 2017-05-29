@@ -8,6 +8,6 @@ describe('Nav', () => {
   beforeAll(() => wrapper = shallow(<Nav />))
 
   it('shout exists', () => {
-    expect(wrapper.exists()).toBeTruthy;
+    expect(wrapper.exists()).toBeTruthy();
   })
 })
