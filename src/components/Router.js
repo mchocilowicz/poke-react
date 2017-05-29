@@ -1,6 +1,6 @@
 import React from 'react'
 import { HashRouter, Route } from 'react-router-dom'
-import Nav from '../Nav'
+import Nav from './Nav'
 import MainPage from './MainPage'
 import AboutPage from './AboutPage'
 import RandomPage from './RandomPage'
