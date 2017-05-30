@@ -1,16 +1,21 @@
 import React from 'react'
-import { List, Image } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 const PokemonItem = ({ index, name }) => (
-  <List.Item>
-    <Image avatar src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`} />
-    <List.Content>
-      <Link to={`/pokemon/${index}`}>
-        {name.toUpperCase()}
-      </Link>
-    </List.Content>
-  </List.Item>
+  <Card>
+    <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`} />
+    <Card.Content>
+      <Card.Header>
+        {index}
+      </Card.Header>
+      <Card.Description>
+        <Link to={`/pokemon/${index}`}>
+          {name.toUpperCase()}
+        </Link>
+      </Card.Description>
+    </Card.Content>
+  </Card>
 )
 
 export default PokemonItem
