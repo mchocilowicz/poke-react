@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
     "bluebird": "^3.5.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.9",
@@ -67,6 +68,5 @@
     "eject": "react-scripts eject",
     "flow": "flow",
     "jest": "jest"
-
   }
 }
