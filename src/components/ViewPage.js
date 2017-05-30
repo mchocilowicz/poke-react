@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import { Loader, Image, Header, Table } from 'semantic-ui-react'
 
-class RandomPage extends Component {
+class ViewPage extends Component {
   componentDidMount() {
     axios
-      .get(`http://pokeapi.co/api/v2/pokemon/${Math.floor((Math.random() * 718) + 1)}`)
+      .get(`http://pokeapi.co/api/v2/pokemon/${this.props.match.params.pokemonId}`)
       .then(res => res.data).then(data => this.setState({ ...data }))
   }
 
@@ -73,4 +73,4 @@ class RandomPage extends Component {
   }
 }
 
-export default RandomPage
+export default ViewPage
