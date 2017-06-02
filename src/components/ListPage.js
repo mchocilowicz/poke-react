@@ -6,7 +6,7 @@ import PokemonItem from './PokemonItem'
 const ListPage = () => (
   <Card.Group>
     {P.pokemons.map((pok, index) =>
-      <PokemonItem key={pok.name} index={index+1} name={pok.name} />)
+      <PokemonItem key={pok.name} index={index + 1} name={pok.name} />)
     }
   </Card.Group>
 )

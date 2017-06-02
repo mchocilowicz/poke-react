@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
-import axios from 'axios';
-import { Loader, Image, Header, Table } from 'semantic-ui-react'
+import axios from 'axios'
+import { Header, Image, Loader, Table } from 'semantic-ui-react'
 
 class ViewPage extends Component {
-  componentDidMount() {
+  componentDidMount () {
     axios
       .get(`http://pokeapi.co/api/v2/pokemon/${this.props.match.params.pokemonId}`)
-      .then(res => res.data).then(data => this.setState({ ...data }))
+      .then(res => res.data).then(data => this.setState({...data}))
   }
 
   render () {
     if (!this.state) {
       return (
         <Header as='h1' icon textAlign='center'>
-          <Loader active inline='centered' />
+          <Loader active inline='centered'/>
         </Header>
       )
     }
     return (
       <Header as='h2' icon textAlign='center'>
-        <Image src={this.state.sprites.front_default} />
-        <Image src={this.state.sprites.back_default} />
+        <Image src={this.state.sprites.front_default}/>
+        <Image src={this.state.sprites.back_default}/>
         <Header.Content>
           {this.state.name.toUpperCase()}
         </Header.Content>
